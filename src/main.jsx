@@ -9,6 +9,7 @@ import {
 import Home from './Component/Home.jsx';
 import Book from './Component/Book.jsx';
 import About from './Component/About.jsx';
+import Bookdetails from './Component/Bookdetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,13 @@ const router = createBrowserRouter([
         element: <Book></Book>,
         loader:()=> fetch("https://api.itbook.store/1.0/new"),
       },
+      {
+        path: "books/:id",
+        element: <Bookdetails></Bookdetails>,
+        loader:({params})=> fetch(`https://api.itbook.store/1.0/books/${params.id}`)
+      
+      },
+
       {
         path: "/about",
         element: <About></About>,

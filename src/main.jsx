@@ -11,11 +11,13 @@ import Book from './Component/Book.jsx';
 import About from './Component/About.jsx';
 import Bookdetails from './Component/Bookdetails.jsx';
 import LoadingSpeaner from './Component/LoadingSpeaner.jsx';
+import Errorpage from './Component/Errorpage.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element:<App></App>,
+    errorElement:<Errorpage></Errorpage>,
    
     children: [
       {

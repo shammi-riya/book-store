@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Header from './Component/Header'
 import { Outlet } from 'react-router-dom'
+import Footer from './Component/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,7 +10,10 @@ function App() {
   return (
     <>
       <Header></Header>
-      <Outlet></Outlet>
+     <div className='min-h-[calc(100vh-100px)]'>
+     <Outlet></Outlet>
+     </div>
+      <Footer></Footer>
     </>
   )
 }

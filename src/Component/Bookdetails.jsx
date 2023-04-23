@@ -1,11 +1,26 @@
 import React, { useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigation } from 'react-router-dom';
+import LoadingSpeaner from './LoadingSpeaner';
 
 const Bookdetails = () => {
+
+    const navigation = useNavigation()
+    if(navigation.state === "loading"){
+        return <LoadingSpeaner></LoadingSpeaner>
+     }
     const bookDetails = useLoaderData()
     const [fold,setFold] = useState(true)
+   
+    
+
+  
+
+
+
     const {desc,image, rating,authors, language,pages,publisher,subtitle,titla,url,year,price} = bookDetails;
-    return (
+
+   
+   return (
         <div className='my-container'>
         {/* Container Box */}
         <div className='flex flex-col max-w-screen-lg overflow-hidden bg-white border rounded shadow-sm lg:flex-row sm:mx-auto'>

@@ -10,6 +10,7 @@ import Home from './Component/Home.jsx';
 import Book from './Component/Book.jsx';
 import About from './Component/About.jsx';
 import Bookdetails from './Component/Bookdetails.jsx';
+import LoadingSpeaner from './Component/LoadingSpeaner.jsx';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       
       },
 
+      {
+        path: "/loader",
+        element: <LoadingSpeaner></LoadingSpeaner>,
+      },
       {
         path: "/about",
         element: <About></About>,
